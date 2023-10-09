@@ -23,11 +23,16 @@ let biglietto = euroAlKm * numeroKm;
 
 
 
-if(isNaN(etàPasseggero) && isNaN(numeroKm)){
-    costoBiglietto.innerHTML = 'Bisogna inserire solo numero.'
+if(isNaN(etàPasseggero) || isNaN(numeroKm)){
+    console.log("not a number");
+    notNumber.innerHTML = "Bisogna inserire solo numero."
     window.location.reload()
-    console.log(numeroKm,etàPasseggero);
+    console.log(numeroKm, etàPasseggero);
 }
+const notNumber= document.getElementById (prezzo-biglietto);
+notNumber.innerHTML= 'Bisogna scrivere numeri'
+
+
 
 //let isNaN = document.getElementById ('prezzo-biglietto');
 //isNaN.innerHTML = 'DEVI INSERIRE SOLO NUMERI'
