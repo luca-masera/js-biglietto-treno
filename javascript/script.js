@@ -22,6 +22,12 @@ console.log(numeroKm,etàPasseggero);
 let biglietto = euroAlKm * numeroKm; 
 
 
+
+if(isNaN(etàPasseggero) || isNaN(numeroKm)){
+    costoBigliettobiglietto.innerHTML = 'Bisogna inserire solo numero.'
+}
+
+
 if(etàPasseggero < 18){
     biglietto = biglietto - (biglietto * 20/100)
     console.log(biglietto)
@@ -30,10 +36,7 @@ else if(etàPasseggero > 65){
     biglietto = biglietto - (biglietto * 40/100)
     console.log(biglietto)
 }
-else((etàPasseggero >= 18) || (etàPasseggero <= 65)) {
-    biglietto = biglietto
-    console.log(biglietto)
-}
+
 
 let costoBiglietto = document.getElementById ('prezzo-biglietto');
 costoBiglietto.innerHTML = biglietto
