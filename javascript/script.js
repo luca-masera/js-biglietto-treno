@@ -15,17 +15,21 @@ console.log(costoBase);
 
 
 
-let numeroKm = prompt('Quanti chilometri vuoi percorrere?');
-let etàPasseggero = prompt('Quanti anni hai?');
+let numeroKm =parseInt( prompt('Quanti chilometri vuoi percorrere?'));
+let etàPasseggero =parseInt( prompt('Quanti anni hai?'));
 console.log(numeroKm,etàPasseggero);
 
 let biglietto = euroAlKm * numeroKm; 
 
 
 
-if(isNaN(etàPasseggero) || isNaN(numeroKm)){
-    costoBigliettobiglietto.innerHTML = 'Bisogna inserire solo numero.'
+if(isNaN(etàPasseggero) && isNaN(numeroKm)){
+    //costoBiglietto.innerHTML = 'Bisogna inserire solo numero.'
+    console.log(numeroKm,etàPasseggero);
 }
+
+//let isNaN = document.getElementById ('prezzo-biglietto');
+//isNaN.innerHTML = 'DEVI INSERIRE SOLO NUMERI'
 
 
 if(etàPasseggero < 18){
@@ -40,3 +44,7 @@ else if(etàPasseggero > 65){
 
 let costoBiglietto = document.getElementById ('prezzo-biglietto');
 costoBiglietto.innerHTML = biglietto
+
+
+let dueDecimali = Math.floor(biglietto*100)/100;
+      document.getElementById("prezzo-biglietto").innerHTML = dueDecimali;
